@@ -54,7 +54,7 @@ I min_element(I first, I last, Compare cmp) {
     if (first == last) return last;
     I min_el = first;
     while (++first != last) {
-        if (cmp(*first, *min_el)) {
+        if (!cmp(*min_el, *first)) {
             min_el = first;
         }
     }
